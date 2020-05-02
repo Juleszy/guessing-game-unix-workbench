@@ -11,5 +11,4 @@ README.md:
 	echo "## Date Makefile Ran" >> README.md
 	date >> README.md
 	echo "## Number of code lines in guessingame.sh" >> README.md
-	wc -l guessinggame.sh >> README.md
-
+	wc -l guessinggame.sh | egrep -o "[0-9]+" >> README.md
