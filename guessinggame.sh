@@ -5,13 +5,15 @@
 # The program should contain at least one function, one loop, and one if statement.
 # The program should be more than 20 lines of code but less than 50 lines of code.
 
-codelines=20
+codelines=$( wc -l guessinggame.sh | egrep -o "[0-9]+" )
 guessnum=0
 
 function linecompare {
-	if [[ $guessnum -lt $codelines ]]; then
+	if [[ $guessnum -lt $codelines ]]
+	then
 		echo "Your guess was too low. Try again."
-	elif [[ $guessnum -gt $codelines ]]; then
+	elif [[ $guessnum -gt $codelines ]]
+	then
 		echo "Your guess was too high. Try again."
 	fi
 }

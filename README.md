@@ -1,5 +1,5 @@
 # Guessing Game - Unix Workbench
-## Date Makefile Ran
-Sat May  2 19:55:58 EDT 2020
+## Ran Makefile On
+Sat May  2 20:45:38 EDT 2020
 ## Number of code lines in guessingame.sh
-5
+26
