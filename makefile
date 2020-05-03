@@ -1,10 +1,3 @@
-# Generate README.md with the following: 
-# The title of the project.
-# The date and time at which make was run.
-# The number of lines of code contained in guessinggame.sh
-
-#clean:
-#	rm README.md
 
 README.md: 
 	echo "# Guessing Game - Unix Workbench" > README.md
