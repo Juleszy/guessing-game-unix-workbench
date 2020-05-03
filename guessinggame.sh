@@ -5,23 +5,24 @@
 # The program should contain at least one function, one loop, and one if statement.
 # The program should be more than 20 lines of code but less than 50 lines of code.
 
-codelines=$( wc -l guessinggame.sh | egrep -o "[0-9]+" )
+ls -l > filecount.txt
+filecount=$( wc -l filecount.txt | egrep -o "[0-9]+" )
 guessnum=0
 
-function linecompare {
-	if [[ $guessnum -lt $codelines ]]
+function guesstest {
+	if [[ $guessnum -lt $filecount ]]
 	then
 		echo "Your guess was too low. Try again."
-	elif [[ $guessnum -gt $codelines ]]
+	elif [[ $guessnum -gt $filecount ]]
 	then
 		echo "Your guess was too high. Try again."
 	fi
 }
 
-while [[ $guessnum -ne $codelines ]]
+while [[ $guessnum -ne $filecount ]]
 do
-	echo "Please enter your guess for the number of lines of code in guessinggame.sh: "
+	echo "Please enter your guess for the number of files in current directory: "
 	read guessnum
-	linecompare $guessnum
+	guesstest $guessnum
 done
 echo "Congraulations! You guessed the number of lines of code correctly."
