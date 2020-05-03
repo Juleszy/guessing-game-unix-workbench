@@ -5,8 +5,7 @@
 # The program should contain at least one function, one loop, and one if statement.
 # The program should be more than 20 lines of code but less than 50 lines of code.
 
-ls -l > filecount.txt
-filecount=$( wc -l filecount.txt | egrep -o "[0-9]+" )
+filecount=$( ls | wc -l )
 guessnum=0
 
 function guesstest {
