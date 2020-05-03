@@ -4,3 +4,21 @@
 # The program should be able to be run by entering bash guessinggame.sh into the console.
 # The program should contain at least one function, one loop, and one if statement.
 # The program should be more than 20 lines of code but less than 50 lines of code.
+
+codelines=20
+guessnum=0
+
+function linecompare {
+	if [[ $guessnum -lt $codelines ]]; then
+		echo "Your guess was too low. Try again."
+	elif [[ $guessnum -gt $codelines ]]; then
+		echo "Your guess was too high. Try again."
+}
+
+while [[ $guessnum -ne $codelines ]]
+do
+	echo "Please enter your guess for the number of lines of code in guessinggame.sh: "
+	read guessnum
+	linecompare $guessnum
+done
+echo "Congraulations! You guessed the number of lines of code correctly."
