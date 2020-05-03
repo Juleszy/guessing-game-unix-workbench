@@ -13,6 +13,7 @@ function linecompare {
 		echo "Your guess was too low. Try again."
 	elif [[ $guessnum -gt $codelines ]]; then
 		echo "Your guess was too high. Try again."
+	fi
 }
 
 while [[ $guessnum -ne $codelines ]]
